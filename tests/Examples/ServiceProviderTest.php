@@ -1,16 +1,17 @@
 <?php
 
-namespace Ridrog\Boilerplate\Test;
+namespace Ridrog\Dummy\Test\Examples;
 
+use Ridrog\Dummy\Test\TestCase;
 use Illuminate\Support\ServiceProvider;
-use Ridrog\Boilerplate\BoilerplateServiceProvider;
+use Ridrog\Dummy\DummyServiceProvider;
 
 class ServiceProviderTest extends TestCase
 {
 
     /**
      *
-     * @var BoilerplateServiceProvider
+     * @var DummyServiceProvider
      */
     private $provider;
 
@@ -21,7 +22,7 @@ class ServiceProviderTest extends TestCase
     {
         parent::setUp();
 
-        $this->provider = $this->app->getProvider(BoilerplateServiceProvider::class);
+        $this->provider = $this->app->getProvider(DummyServiceProvider::class);
 
     }
 
@@ -40,7 +41,7 @@ class ServiceProviderTest extends TestCase
     {
         $expectations = [
              \Illuminate\Support\ServiceProvider::class,
-             BoilerplateServiceProvider::class
+             DummyServiceProvider::class
         ];
 
         foreach ($expectations as $expected) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ridrog\Boilerplate\Http\Controllers;
+namespace Ridrog\Dummy\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

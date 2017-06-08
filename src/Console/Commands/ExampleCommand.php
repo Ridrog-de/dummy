@@ -1,6 +1,6 @@
 <?php
 
-namespace Ridrog\Boilerplate\Console\Commands;
+namespace Ridrog\Dummy\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -11,7 +11,7 @@ class ExampleCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'boilerplate:command 
+    protected $signature = 'dummy:command 
                                   {argument1 : Argument 1 required} 
                                   {argument2? : Argument 2 optional}
                                   {argument3=default : Argument 3 optional with: } 
@@ -26,7 +26,7 @@ class ExampleCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Boilerplate Command description';
+    protected $description = 'Dummy Command description';
 
     /**
      * Create a new command instance.

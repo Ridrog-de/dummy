@@ -1,29 +1,29 @@
 <?php
 
-namespace Ridrog\Boilerplate;
+namespace Ridrog\Dummy;
 
 // Commands
-use Ridrog\Boilerplate\Console\Commands\ExampleCommand;
-use Ridrog\Boilerplate\Console\Commands\TestCommand;
+use Ridrog\Dummy\Console\Commands\ExampleCommand;
+use Ridrog\Dummy\Console\Commands\TestCommand;
 
 // Middleware
-use Ridrog\Boilerplate\Http\Middleware\ExampleMiddleWare;
+use Ridrog\Dummy\Http\Middleware\ExampleMiddleWare;
 
 // Events
 use Illuminate\Support\Facades\Event;
-use Ridrog\Boilerplate\Events\BoilerplateEvent;
-use Ridrog\Boilerplate\Listeners\BoilerplateListener;
+use Ridrog\Dummy\Events\DummyEvent;
+use Ridrog\Dummy\Listeners\DummyListener;
 
 use Illuminate\Support\ServiceProvider;
 
-class BoilerplateServiceProvider extends ServiceProvider
+class DummyServiceProvider extends ServiceProvider
 {
     /**
      * Name of the Package
      *
      * @var string
      */
-    public $packageName = 'boilerplate';
+    public $packageName = 'dummy';
 
     /**
      * Bootstrap the application services.
@@ -66,7 +66,7 @@ class BoilerplateServiceProvider extends ServiceProvider
 
         $this->defineMiddleware();
 
-        $this->app->bind('boilerplate', 'Ridrog\Boilerplate\Boilerplate');
+        $this->app->bind('dummy', 'Ridrog\Dummy\Dummy');
     }
 
     /**
@@ -84,7 +84,8 @@ class BoilerplateServiceProvider extends ServiceProvider
     }
 
     /**
-     * Merge and publish Config
+     * Publish Config
+     *
      */
     public function publishConfig()
     {
@@ -99,7 +100,7 @@ class BoilerplateServiceProvider extends ServiceProvider
     public function publishAssets()
     {
         $this->publishes([
-            __DIR__.'/Resources/Assets' => public_path('boilerplate'),
+            __DIR__.'/Resources/Assets' => public_path('dummy'),
            // more folders
         ], $this->packageName.'-assets');
     }
@@ -161,8 +162,8 @@ class BoilerplateServiceProvider extends ServiceProvider
      */
     public function listenForEvents()
     {
-        Event::listen(BoilerplateEvent::class, BoilerplateListener::class);
+        Event::listen(DummyEvent::class, DummyListener::class);
 
-        event(new BoilerplateEvent);
+        event(new DummyEvent);
     }
 }

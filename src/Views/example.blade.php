@@ -1,1 +1,1 @@
-<h1>Hello Boilerplate</h1>
+<h1>Hello Dummy</h1>

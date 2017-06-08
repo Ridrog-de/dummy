@@ -1,13 +1,13 @@
 <?php
 
-namespace Ridrog\Boilerplate;
+namespace Ridrog\Dummy;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class BoilerplateNotification extends Notification
+class DummyNotification extends Notification
 {
     use Queueable;
 

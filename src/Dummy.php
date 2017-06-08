@@ -1,8 +1,8 @@
 <?php
 
-namespace Ridrog\Boilerplate;
+namespace Ridrog\Dummy;
 
-class Boilerplate
+class Dummy
 {
     public function hello()
     {

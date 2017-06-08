@@ -1,13 +1,13 @@
 <?php
 
-namespace Ridrog\Boilerplate\Listeners;
+namespace Ridrog\Dummy\Listeners;
 
 use Illuminate\Support\Facades\Log;
-use Ridrog\Boilerplate\Events\BoilerplateEvent;
+use Ridrog\Dummy\Events\DummyEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class BoilerplateListener
+class DummyListener
 {
     /**
      * Create the event listener.
@@ -22,11 +22,11 @@ class BoilerplateListener
     /**
      * Handle the event.
      *
-     * @param  BoilerplateEvent  $event
+     * @param  DummyEvent  $event
      * @return void
      */
-    public function handle(BoilerplateEvent $event)
+    public function handle(DummyEvent $event)
     {
-        Log::info("boilerplate event was fired");
+        Log::info("dummy event was fired");
     }
 }

@@ -1,13 +1,17 @@
 <?php
 
-Route::get('testroute', function(){
+Route::get('dummy-route', function(){
     return "The Routes are loaded";
+})->name('dummy-string-route');
+
+Route::group(['middleware' => 'web', 'namespace' => 'Ridrog\Dummy\Http\Controllers'], function () {
+    Route::get('/dummy-controller', 'DummyController@test')->name('dummy-controller-route');
 });
 
-Route::get('testtrans', function(){
-    return trans('boilerplate::example.message');
-});
+Route::get('dummy-view', function(){
+    return view('dummy::example');
+})->name('dummy-view-route');
 
-Route::group(['middleware' => 'web', 'namespace' => 'Ridrog\Boilerplate\Http\Controllers'], function () {
-    Route::get('/controllertest', 'BoilerplateController@test')->name('test-controller');
-});
+Route::get('dummy-translation', function(){
+    return trans('dummy::example.message');
+})->name('dummy-translation-route');

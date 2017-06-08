@@ -1,6 +1,6 @@
 <?php
 
-namespace Ridrog\Boilerplate\Http\Middleware;
+namespace Ridrog\Dummy\Http\Middleware;
 
 use Closure;
 

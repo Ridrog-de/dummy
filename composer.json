@@ -1,6 +1,6 @@
 {
-    "name": "ridrog/boilerplate",
-    "description": "Boilerplate for Laravel Packages",
+    "name": "ridrog/dummy",
+    "description": "Dummy for Laravel Packages",
     "type": "package",
     "keywords": ["laravel","package", "package development"],
     "homepage" : "https://github.com/:vendor/:package_name",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ridrog\\Boilerplate\\": "src/"
+            "Ridrog\\Dummy\\": "src/"
         },
         "files": [
             "src/helper.php"
@@ -32,7 +32,7 @@
     "prefer-stable": true,
     "autoload-dev": {
         "psr-4": {
-            "Ridrog\\Boilerplate\\Test\\": "tests"
+            "Ridrog\\Dummy\\Test\\": "tests"
         }
     },
     "scripts": {

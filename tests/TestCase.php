@@ -1,8 +1,8 @@
 <?php
 
-namespace Ridrog\Boilerplate\Test;
+namespace Ridrog\Dummy\Test;
 
-use Ridrog\Boilerplate\BoilerplateServiceProvider;
+use Ridrog\Dummy\DummyServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
@@ -29,7 +29,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            BoilerplateServiceProvider::class,
+            DummyServiceProvider::class,
         ];
     }
 }

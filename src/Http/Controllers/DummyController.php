@@ -1,10 +1,10 @@
 <?php
 
-namespace Ridrog\Boilerplate\Http\Controllers;
+namespace Ridrog\Dummy\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BoilerplateController extends Controller
+class DummyController extends Controller
 {
     public function test()
     {

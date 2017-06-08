@@ -1,13 +1,13 @@
 <?php
 
-namespace Ridrog\Boilerplate\Facades;
+namespace Ridrog\Dummy\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class BoilerplateFacade extends Facade
+class DummyFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'boilerplate';
+        return 'dummy';
     }
 }

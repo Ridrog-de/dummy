@@ -1,17 +1,18 @@
 <?php
 
-namespace Ridrog\Boilerplate\Test;
+namespace Ridrog\Dummy\Test\Examples;
 
-use Ridrog\Boilerplate\Boilerplate;
+use Ridrog\Dummy\Dummy;
+use Ridrog\Dummy\Test\TestCase;
 use Illuminate\Support\ServiceProvider;
-use Ridrog\Boilerplate\BoilerplateServiceProvider;
+use Ridrog\Dummy\DummyServiceProvider;
 
-class BoilerplateTest extends TestCase
+class DummyTest extends TestCase
 {
 
     /**
      *
-     * @var BoilerplateServiceProvider
+     * @var DummyServiceProvider
      */
     private $provider;
 
@@ -22,7 +23,7 @@ class BoilerplateTest extends TestCase
     {
         parent::setUp();
 
-        $this->provider = $this->app->getProvider(BoilerplateServiceProvider::class);
+        $this->provider = $this->app->getProvider(DummyServiceProvider::class);
 
     }
 
@@ -39,9 +40,9 @@ class BoilerplateTest extends TestCase
     /** @test */
     public function it_returns_hello()
     {
-        $boilerplate = new Boilerplate();
+        $dummy = new Dummy();
 
-        $this->assertTrue($boilerplate->hello() === "hello");
+        $this->assertTrue($dummy->hello() === "hello");
     }
 
 }

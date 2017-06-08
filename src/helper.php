@@ -1,15 +1,15 @@
 <?php
 
-if ( ! function_exists('boilerplate')) {
+if ( ! function_exists('dummy')) {
 
     /**
      *
      */
-    function boilerplate()
+    function dummy()
     {
-        $boilerplate = app('boilerplate');
+        $dummy = app('dummy');
 
-        return $boilerplate;
+        return $dummy;
     }
 
 }

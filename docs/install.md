@@ -5,7 +5,7 @@
 ## Require it
 
 ```
-composer require ridrog/boilerplate
+composer require ridrog/dummy
 ```
 
 ## Include Service Provider 
@@ -13,7 +13,7 @@ composer require ridrog/boilerplate
 ```
 'providers' => [
     ...
-    Ridrog\Boilerplate\BoilerplateServiceProvider::class,
+    Ridrog\Dummy\DummyServiceProvider::class,
     ...
  ],
 ```
@@ -23,7 +23,7 @@ Register the Facade
 ```
 'aliases' => [
     ...
-    'Boilerplate' => Ridrog\Boilerplate\Facades\BoilerplateFacade::class,
+    'Dummy' => Ridrog\Dummy\Facades\DummyFacade::class,
     ...
 ];
 ```

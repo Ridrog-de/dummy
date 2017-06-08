@@ -1,6 +1,6 @@
 <?php
 
-namespace Ridrog\Boilerplate\Events;
+namespace Ridrog\Dummy\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
@@ -10,7 +10,7 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class BoilerplateEvent
+class DummyEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
